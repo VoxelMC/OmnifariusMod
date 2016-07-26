@@ -1,0 +1,3 @@
+C:\Users\Sandu\Documents\My Games\Terraria\ModLoader\Mod Sources\YourModName\bin\Debug\MOD.exe.config
+C:\Users\Sandu\Documents\My Games\Terraria\ModLoader\Mod Sources\YourModName\obj\Debug\YourModName.csprojResolveAssemblyReference.cache
+C:\Users\Neptune\Documents\My Games\Terraria\ModLoader\Mod Sources\OmnifariusMod\bin\Debug\MOD.exe.config

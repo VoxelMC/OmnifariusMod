@@ -1,0 +1,12 @@
+author = Al0n37
+
+version = 0.1
+displayName = Tutorial MOD
+homepage = 
+
+hideCode = false
+hideResources = false
+includeSource = false
+
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+includePDB = true

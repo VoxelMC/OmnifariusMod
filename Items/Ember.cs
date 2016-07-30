@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod.Items
+/*namespace OmnifariusMod.Items
 {
 	public class Ember : ModItem
 	{
@@ -20,12 +20,12 @@ namespace OmnifariusMod.Items
 			item.useSound = 1;
 			item.autoReuse = true;
 			item.knockBack = 4f;
-			item.pickaxe = 100; //change
-			item.melee = true;\
+			item.pick = 100; //change
+			item.melee = true;
 			item.scale = 1f;
 		}
 
-		/*public override void AddRecipe()
+		public override void AddRecipe()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient();
@@ -34,4 +34,4 @@ namespace OmnifariusMod.Items
 			recipe.AddRecipe();
 		}
 	}
-}
+}*/

@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod.NPCs
+/*namespace OmnifariusMod.NPCs
 {
     public class NPCTown : ModNPC
     {
@@ -97,3 +97,4 @@ namespace OmnifariusMod.NPCs
 
     }
 }
+*/

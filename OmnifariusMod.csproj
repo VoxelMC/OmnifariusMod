@@ -38,6 +38,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Xna.ni">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Silverlight\5.1.50428.0\System.Windows.Xna.ni.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Terraria">

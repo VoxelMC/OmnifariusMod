@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod.Items
+/*namespace OmnifariusMod.Items
 {
 	public class HisFury : ModItem
 	{
@@ -24,7 +24,7 @@ namespace OmnifariusMod.Items
 			item.melee = true;
 		}
 
-		/*public override void AddRecipe()
+		public override void AddRecipe()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient();
@@ -32,5 +32,6 @@ namespace OmnifariusMod.Items
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
+        
 	}
-}
+}*/

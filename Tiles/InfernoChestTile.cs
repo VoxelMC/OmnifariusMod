@@ -34,7 +34,7 @@ namespace OmnifariusMod.Tiles
             dustType = mod.DustType("Inferno");
             disableSmartCursor = true;
             adjTiles = new int[] { TileID.Containers };
-            chest = "InfernoChest";
+            chest = "Inferno Chest";
         }
 
         public string MapChestName(string name, int i, int j)

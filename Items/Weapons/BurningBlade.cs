@@ -5,24 +5,24 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod-Schmo.Items.Weapons
+namespace OmnifariusMod.Items.Weapons
 {
 	public class BurningBlade : ModItem
 	{
 		public override void SetDefaults()
 		{
-			item.name = "BurningBlade";
-			item.damage = 60; //change
+			item.name = "Burning Blade";
+			item.damage = 17;
+            item.height = 7;
+            item.width = 1;
 			item.useStyle = 1;
-			item.useAnimation = 20; //change
-			item.useTime = 20; //change
+			item.useAnimation = 19;
+			item.useTime = 19;
 			item.useSound = 1;
 			item.value = 10; //change
-			item.toolTip = "."; //change
-			item.rare = 2; //change
-			item.autoReuse = true;
-			item.useTurn = true
-			item.scale = 1;
+			item.rare = 6;
+            item.useTurn = true;
+			item.scale = 0.8f;
 			item.melee = true;
 			item.knockBack = 3f; //change
 		}

@@ -6,7 +6,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod.Items.Weapons
+/*namespace OmnifariusMod.Items.Weapons
 {
 	public class CrystillineEdge : ModItem
 	{
@@ -39,3 +39,4 @@ namespace OmnifariusMod.Items.Weapons
 	}
 	
 }
+*/

@@ -19,16 +19,16 @@ namespace OmnifariusMod.Items
             item.useStyle = 1;
             item.consumable = true;
             item.value = 50;    //chest value/price
-            item.createTile = mod.TileType("InfenoChestTile");  //here add your Chest name tile
+            item.createTile = mod.TileType("InfernoChestTile");  //here add your Chest name tile
         }
 
-        public override void AddRecipes()
+        /*public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Chest);          //example of how to add a vanilla Terraria item
             recipe.AddIngredient(null, "ItemName", 10);   //example of how to add your custom item to the ingredient
             recipe.SetResult(this);
             recipe.AddRecipe();
-        }
+        }*/
     }
 }

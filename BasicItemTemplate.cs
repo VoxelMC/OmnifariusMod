@@ -7,7 +7,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 //Make sure your item file is the same name as your .png file!
-namespace TArmory.Items.Weapons // <------------------------------<
+/*namespace TArmory.Items.Weapons // <------------------------------<
 {                                                              //^^^
     public class Inserthere : ModItem //Remember to change the Namespace and Class before building your mod.
     {
@@ -48,3 +48,4 @@ namespace TArmory.Items.Weapons // <------------------------------<
 //# Made by VoxelMC, check out my mod!                                                     #
 //# Find it here: http://forums.terraria.org/index.php?threads/terrarian-armory.46188/     #
 //##########################################################################################
+*/

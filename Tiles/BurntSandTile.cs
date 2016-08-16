@@ -14,7 +14,7 @@ namespace OmnifariusMod.Tiles
             Main.tileBlockLight[Type] = true;
             Main.tileSand[Type] = true;
             Main.tileLighted[Type] = true;
-            drop = mod.ItemType("BurntSandItem");
+            drop = mod.ItemType("BurntSand");
             AddMapEntry(new Color(36, 36, 40));
         }
 

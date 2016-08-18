@@ -16,6 +16,7 @@ namespace OmnifariusMod
         public bool minionName = false;
         public bool Pet = false;
         public static bool hasProjectile;
+        public bool ConduitArmour = false;
 
         public override void ResetEffects()
         {

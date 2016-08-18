@@ -22,5 +22,20 @@ namespace OmnifariusMod
             minionName = false;
             Pet = false;
         }
+        public override void OnHitAnything(float x, float y, Entity victim)
+        {
+            if (ConduitArmour = true)
+            {
+                int magicHit = 0;
+                magicHit += 1;
+
+                if (magicHit >= 5)
+                {
+                    Projectile.NewProjectile(npc.position.X + 50, npc.position.Y + 50, Main.rand.Next(-6, 7), -3, mod.ProjectileType("MartianBolt"), 23, 0f, Main.myPlayer, 0f, 1f);
+                    magicHit = 0;
+                }
+            }
+            return false;
+        }
     }
 }

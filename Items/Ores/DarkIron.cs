@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace OmnifariusMod.Items
 {
-    public class InfernoChest : ModItem
+    public class DarkIron : ModItem
     {
         public override void SetDefaults()
         {

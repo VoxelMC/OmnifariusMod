@@ -1,9 +1,13 @@
-using Terraria.ID;
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.ModLoader;
+using Terraria.ID;
+using System;
+using System.Collections.Generic;
 
 namespace OmnifariusMod.Items
 {
-    public class InfernoChest : ModItem
+    public class Testitem : ModItem
     {
         public override void SetDefaults()
         {
@@ -24,7 +28,7 @@ namespace OmnifariusMod.Items
         }
         public override void UpdateEquip(Player player)
         {
-            player.GetModPlayer<CrystalPlayer>(mod).ConduitArmour = true; //Enables Conduit Armour effect
+            player.GetModPlayer<MyPlayer>(mod).ConduitArmour = true; //Enables Conduit Armour effect
         }
     }
 }

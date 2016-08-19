@@ -56,7 +56,7 @@ namespace OmnifariusMod
         {// WorldGen.TileRunner(Main.spawnTileX + 376, Main.spawnTileY + -15, 6, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
             WorldGen.TileRunner(X, Y - 10, 6, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
             WorldGen.TileRunner(X, Y - 5, 8, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
-            WorldGen.TileRunner(X, Y, 14, 10, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
+            WorldGen.TileRunner(X, Y, 10, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
             WorldGen.TileRunner(X, Y + 5, 12, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
             WorldGen.TileRunner(X, Y + 10, 26, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
             WorldGen.TileRunner(X, Y + 15, 30, Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);

@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod.Items
+namespace OmnifariusMod.Items.Ores
 {
     public class DarkIron : ModItem
     {

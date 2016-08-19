@@ -19,6 +19,7 @@ namespace OmnifariusMod
         public bool Pet = false;
         public static bool hasProjectile;
         public bool ConduitArmour = false;
+        public int magicHit = 0;
 
         public override void ResetEffects()
         {
@@ -29,12 +30,12 @@ namespace OmnifariusMod
         {
             if (ConduitArmour == true)
             {
-                int magicHit = 0;
                 magicHit += 1;
 
                 if (magicHit >= 5)
                 {
-                    Projectile.NewProjectile(player.Center, velocity.X, velocity.Y, ProjectileID.HeatRay, 80, projectile.owner, 0, 0f);
+                    Vector2 vel = new Vector2(speed, 0).RotatedBy(player.DirectionTo(Main.MouseWorld).ToRotation());
+                    Projectile.NewProjectile(player.Center.X, player.Center.Y, vel.X, vel.Y, mod.ProjectileType("MartianBolt"), 23, 0f, Main.myPlayer, 0f, 1f);
                     magicHit = 0;
                 }
             }

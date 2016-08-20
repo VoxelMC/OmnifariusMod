@@ -14,7 +14,6 @@ namespace OmnifariusMod.Items
             item.name = "Test Item";
             item.width = 26;
             item.height = 22;
-            item.maxStack = 99;
             AddTooltip("This item is used to test mechanics.");
             item.useTurn = true;
             item.autoReuse = true;
@@ -23,7 +22,7 @@ namespace OmnifariusMod.Items
             item.useStyle = 1;
             item.consumable = true;
             item.value = 50;
-
+            item.accessory = true;
 
         }
         public override void UpdateEquip(Player player)

@@ -34,10 +34,10 @@ namespace OmnifariusMod
             {
                 magicHit += 1;
 
-                if (magicHit >= 5)
+                if (magicHit >= 6)
                 {
                     Vector2 vel = new Vector2(5, 0).RotatedBy(player.DirectionTo(Main.MouseWorld).ToRotation());
-                    Projectile.NewProjectile(player.Center.X, player.Center.Y, vel.X, vel.Y, mod.ProjectileType("MartianBolt"), 23, 0f, Main.myPlayer, 0f, 1f);
+                    Projectile.NewProjectile(player.Center.X, player.Center.Y, vel.X, vel.Y, mod.ProjectileType("MagicArrow"), 23, 0f, Main.myPlayer, 0f, 1f);
                     magicHit = 0;
                 }
             }

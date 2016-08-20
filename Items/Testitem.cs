@@ -20,7 +20,6 @@ namespace OmnifariusMod.Items
             item.useAnimation = 15;
             item.useTime = 10;
             item.useStyle = 1;
-            item.consumable = true;
             item.value = 50;
             item.accessory = true;
 

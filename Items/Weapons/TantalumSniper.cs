@@ -42,6 +42,10 @@ namespace OmnifariusMod.Items.Weapons
             }
             return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
         }
+        public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(-3, -2);
+		}
     }
 }
            

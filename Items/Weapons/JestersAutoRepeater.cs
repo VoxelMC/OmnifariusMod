@@ -15,8 +15,8 @@ namespace OmnifariusMod.Items.Weapons
             item.ranged = true;
             item.damage = 30;
             item.knockBack = 2.5f;
-            item.useTime = 12;
-            item.useAnimation = 12;
+            item.useTime = 9;
+            item.useAnimation = 36;
             item.useStyle = 5;
             item.value = Item.sellPrice(0, 0, 0, 0);
             item.rare = 5;
@@ -26,36 +26,20 @@ namespace OmnifariusMod.Items.Weapons
             item.shootSpeed = 10f;
             item.scale = 1f;
             item.useAmmo = 1;
+            item.toolTip = "25% chance to not cosume ammo";
+            item.toolTip2 = "Turns Wooden Arrows into Jester's Arrows";
         }
         public override bool Shoot(Player player, ref Microsoft.Xna.Framework.Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
         {
-            float spread = 11.75f * 0.0174f;
-            float baseSpeed = (float)Math.Sqrt(speedX * speedX + speedY * speedY);
-            double startAngle = Math.Atan2(speedX, speedY) - spread / 2;
-            double deltaAngle = spread / 3f;
-            double offsetAngle;
-            int i;
-            for (i = 0; i < 3; i++)
+            if (type == ProjectileID.WoodenArrowFriendly) // or ProjectileID.WoodenArrowFriendly
             {
-                offsetAngle = startAngle + deltaAngle * 2;
-                Terraria.Projectile.NewProjectile(position.X, position.Y, baseSpeed * (float)Math.Sin(offsetAngle), baseSpeed * (float)Math.Cos(offsetAngle), ProjectileID.JestersArrow, damage, knockBack, item.owner);
+                type = ProjectileID.JestersArrow;
             }
-            for (i = 0; i < 4; i++)
-            {
-                offsetAngle = startAngle + deltaAngle * 2.5f;
-                Terraria.Projectile.NewProjectile(position.X, position.Y, baseSpeed * (float)Math.Sin(offsetAngle), baseSpeed * (float)Math.Cos(offsetAngle), ProjectileID.JestersArrow, damage, knockBack, item.owner);
-            }
-            for (i = 0; i < 5; i++)
-            {
-                offsetAngle = startAngle + deltaAngle / 2;
-                Terraria.Projectile.NewProjectile(position.X, position.Y, baseSpeed * (float)Math.Sin(offsetAngle), baseSpeed * (float)Math.Cos(offsetAngle), ProjectileID.JestersArrow, damage, knockBack, item.owner);
-            }
-            for (i = 0; i < 6; i++)
-            {
-                offsetAngle = startAngle + deltaAngle / 2.5f;
-                Terraria.Projectile.NewProjectile(position.X, position.Y, baseSpeed * (float)Math.Sin(offsetAngle), baseSpeed * (float)Math.Cos(offsetAngle), ProjectileID.JestersArrow, damage, knockBack, item.owner);
-            }
-            return false;
+            return true;
+        }
+        public override bool ConsumeAmmo(Player player)
+        {
+            return Main.rand.NextFloat() > .25f;
         }
     }
 }

@@ -53,9 +53,13 @@ namespace OmnifariusMod
                             {
                                 Main.tile[i, k].type = (ushort)mod.TileType("FlamingGrass");
                             }
-                            if (Main.tile[i, k].type == 53)
+                            if (Main.tile[i, k].type == 53 || Main.tile[i, k].type == 147)
                             {
                                 Main.tile[i, k].type = (ushort)mod.TileType("BurntSand");
+                            }
+                            if (Main.tile[i, k].type == 161)
+                            {
+                                Main.tile[i, k].type = (ushort)mod.TileType("FireIce");
                             }
                         }
                     }

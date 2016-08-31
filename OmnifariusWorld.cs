@@ -32,7 +32,7 @@ namespace OmnifariusMod
                     if (Main.tile[rand1, rand2].type != -1)
                     {
                         // WorldGen.TileRunner(rand1, rand2, Main.rand.Next(8, 10), Main.rand.Next(1, 3), mod.TileType("PetrifiedStoneTile"), true, 0f, 0f, true, true);
-                        WorldGen.TileRunner(rand1, rand2, 1.1, Main.rand.Next(1, 3), mod.TileType("BurntSand"), false, 0f, 0f, true, true);
+                        WorldGen.TileRunner(rand1, rand2, 1.1, Main.rand.Next(1, 3), mod.TileType("BurntSandTile"), false, 0f, 0f, true, true);
                     }
                 }
                 for (int i = 0; i < 3; i++)
@@ -60,7 +60,7 @@ namespace OmnifariusMod
                             }//397 and 396 is to be removed 
                             if (Main.tile[i, k].type == 53 || Main.tile[i, k].type == 147 || Main.tile[i, k].type == 397 || Main.tile[i, k].type == 396)
                             {
-                                Main.tile[i, k].type = (ushort)mod.TileType("BurntSand");
+                                Main.tile[i, k].type = (ushort)mod.TileType("BurntSandTile");
                             }
                             if (Main.tile[i, k].type == 161)
                             {

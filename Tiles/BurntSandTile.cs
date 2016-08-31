@@ -16,6 +16,8 @@ namespace OmnifariusMod.Tiles
             Main.tileLighted[Type] = true;
             drop = mod.ItemType("BurntSand");
             AddMapEntry(new Color(36, 36, 40));
+            Main.tileMerge[Type][mod.TileType("FlamingGrass")] = true;
+            Main.tileMerge[Type][mod.TileType("PetrifiedStone")] = true;
         }
 
         public override bool TileFrame(int x, int y, ref bool resetFrame, ref bool noBreak)

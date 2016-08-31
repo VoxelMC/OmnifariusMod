@@ -42,6 +42,7 @@ namespace OmnifariusMod.Items.Armor
                     newDust.shader = GameShaders.Armor.GetSecondaryShader(player.ArmorSetDye(), player);
                 }
             }
+            player.GetModPlayer<MyPlayer>(mod).infernalSet = true;
         }
 
         public override void AddRecipes()

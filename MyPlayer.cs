@@ -20,7 +20,7 @@ namespace OmnifariusMod
         public bool minionName = false;
         public bool Pet = false;
         public static bool hasProjectile;
-        public bool ConduitArmour = false;
+        public bool ConduitArmour;
         int magicHit = 0;
         public bool infernalSet;
 
@@ -28,14 +28,24 @@ namespace OmnifariusMod
         {
             minionName = false;
             Pet = false;
-            this.infernalSet = false;
+            infernalSet = false;
             ConduitArmour = false;
         }
         public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
         {
+            if (infernalSet = true)
+            {
+                target.AddBuff(mod.BuffType("SeraphineDebuff"), 300); // Lasts 5 seconds.
+            }
+        }
+        public override void OnHitNPCWithProj(Projectile proj, NPC target, int damage, float knockback, bool crit)
+        {
             if (ConduitArmour == true)
             {
-                magicHit += 1;
+                if (proj.magic)
+                {
+                    magicHit += 1;
+                }
 
                 if (magicHit >= 6)
                 {
@@ -45,11 +55,6 @@ namespace OmnifariusMod
                     Main.PlaySound(2, (int)player.position.X, (int)player.position.Y, 91);
                 }
             }
-            if (this.infernalSet)
-            {
-                target.AddBuff(mod.BuffType("SeraphineDebuff"), 300); // Lasts 5 seconds.
-            }
         }
-        
     }
 }

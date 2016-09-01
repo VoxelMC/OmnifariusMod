@@ -22,6 +22,7 @@ namespace OmnifariusMod.Items.Armor
             item.name = "Infernal Helmet";
             item.width = 20; item.height = 12;
             item.toolTip = "???";
+            item.scale = 0.7f
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs)

@@ -8,7 +8,7 @@ namespace OmnifariusMod.Items.Placeable
     {
         public override void SetDefaults()
         {
-            item.name = "Petrified Stone";
+            item.name = "Petrified Stone Block";
             item.width = 12;
             item.height = 12;
             item.maxStack = 999;

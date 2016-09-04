@@ -23,6 +23,7 @@ namespace OmnifariusMod
         public bool ConduitArmour;
         int magicHit = 0;
         public bool infernalSet;
+        public bool ENSet;
 
         public override void ResetEffects()
         {
@@ -30,10 +31,12 @@ namespace OmnifariusMod
             Pet = false;
             infernalSet = false;
             ConduitArmour = false;
+            infernalSet = false;
+            ENSet = false;
         }
         public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
         {
-            if (infernalSet = true)
+            if (infernalSet == true)
             {
                 target.AddBuff(mod.BuffType("SeraphineDebuff"), 300); // Lasts 5 seconds.
             }
@@ -56,5 +59,35 @@ namespace OmnifariusMod
                 }
             }
         }
+
+        //Test Zone
+        /*private void ENSet(ref int damage, ref bool crit)
+        {
+            if (crit)
+            {
+                damage = (int)(damage * critDmgMult);
+            }
+        }
+
+        public override void ModifyHitNPC(Item item, NPC target, ref int damage, ref float knockback, ref bool crit)
+        {
+            ENSet(ref damage, ref crit);
+        }
+
+        public override void ModifyHitNPCWithProj(Projectile proj, NPC target, ref int damage, ref float knockback, ref bool crit)
+        {
+            ENSet(ref damage, ref crit);
+        }
+
+        public override void ModifyHitPvp(Item item, Player target, ref int damage, ref bool crit)
+        {
+            ENSet(ref damage, ref crit);
+        }
+
+        public override void ModifyHitPvpWithProj(Projectile proj, Player target, ref int damage, ref bool crit)
+        {
+            ENSet(ref damage, ref crit);
+        }
+        */
     }
 }

@@ -16,6 +16,7 @@ namespace OmnifariusMod.Items.Ores
             item.useTime = 10;
             item.useStyle = 1;
             item.value = 50;
+            item.autoReuse = true;
         }
     }
 }

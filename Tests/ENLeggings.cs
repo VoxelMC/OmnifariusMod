@@ -1,30 +1,33 @@
-﻿using System;
+using System;
 
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace OmnifariusMod.Items.Armor
+namespace OmnifariusMod.Tests
 {
-    public class InfernalBreastplate : ModItem
+    public class ENLeggings : ModItem
     {
         public override bool Autoload(ref string name, ref string texture, System.Collections.Generic.IList<EquipType> equips)
         {
-            equips.Add(EquipType.Body);
+            equips.Add(EquipType.Legs);
             return true;
         }
 
         public override void SetDefaults()
         {
-            item.name = "Infernal Breastplate";
+            item.name = "EN Leggings";
             item.width = 20; item.height = 12;
             item.toolTip = "???";
-            //item.defense = 
         }
 
         public override void AddRecipes()
         {
             // ???
+        }
+        public override void UpdateEquip(Player player)
+        {
+            player.moveSpeed += 0.10f;
         }
     }
 }

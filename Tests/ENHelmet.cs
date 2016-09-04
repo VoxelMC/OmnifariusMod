@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using Microsoft.Xna.Framework;
 
@@ -7,9 +7,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Graphics.Shaders;
 
-namespace OmnifariusMod.Items.Armor
+namespace OmnifariusMod.Tests
 {
-    public class InfernalHelmet : ModItem
+    public class ENHelmet : ModItem
     {
         public override bool Autoload(ref string name, ref string texture, System.Collections.Generic.IList<EquipType> equips)
         {
@@ -19,7 +19,7 @@ namespace OmnifariusMod.Items.Armor
 
         public override void SetDefaults()
         {
-            item.name = "Infernal Helmet";
+            item.name = "EN Helmet";
             item.width = 20; item.height = 12;
             item.toolTip = "???";
             item.scale = 0.7f;
@@ -27,11 +27,12 @@ namespace OmnifariusMod.Items.Armor
 
         public override bool IsArmorSet(Item head, Item body, Item legs)
         {
-            return body.type == mod.ItemType("InfernalBreastplate") && legs.type == mod.ItemType("InfernalGreaves");
+            return body.type == mod.ItemType("ENBreastplate") && legs.type == mod.ItemType("ENLeggings");
         }
         public override void UpdateArmorSet(Player player)
         {
-            if (Math.Abs(player.velocity.X) + Math.Abs(player.velocity.Y) > 1f && !player.rocketFrame)
+            //Dust Effects
+            /*if (Math.Abs(player.velocity.X) + Math.Abs(player.velocity.Y) > 1f && !player.rocketFrame)
             {
                 for (int i = 0; i < 2; ++i)
                 {
@@ -42,13 +43,19 @@ namespace OmnifariusMod.Items.Armor
                     newDust.velocity.Y = newDust.velocity.Y - player.velocity.Y * 0.5f;
                     newDust.shader = GameShaders.Armor.GetSecondaryShader(player.ArmorSetDye(), player);
                 }
-            }
-            player.GetModPlayer<MyPlayer>(mod).infernalSet = true;
+            }*/
+            player.AddBuff(mod.BuffType("ENBuff"), -1, true);
+            player.GetModPlayer<MyPlayer>(mod).ENSet = true;
         }
 
         public override void AddRecipes()
         {
             // ???
+        }
+        public override void UpdateEquip(Player player)
+        {
+            player.meleeSpeed += 0.12f;
+            player.thrownDamage += 0.12f;
         }
     }
 }

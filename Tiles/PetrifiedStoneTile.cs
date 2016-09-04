@@ -23,5 +23,15 @@ namespace OmnifariusMod.Tiles
         {
             num = fail ? 1 : 3;
         }
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            Tile tile = Main.tile[i, j];
+            if (tile.frameX < 66)
+            {
+                r = 0.01f;
+                g = 0.1f;
+                b = 0.11f;
+            }
+        }
     }
 }

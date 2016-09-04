@@ -8,7 +8,7 @@ namespace OmnifariusMod.Items.Placeable
     {
         public override void SetDefaults()
         {
-            item.name = "Burnt Sand";
+            item.name = "Burnt Sand Block";
             item.width = 12;
             item.height = 12;
             item.maxStack = 999;
@@ -19,6 +19,8 @@ namespace OmnifariusMod.Items.Placeable
             item.useStyle = 1;
             item.consumable = true;
             item.createTile = mod.TileType("BurntSandTile"); //put your CustomBlock Tile name
+            item.toolTip =
+                "`Why isn't this glass? The world will never know!`";
         }
     }
 }

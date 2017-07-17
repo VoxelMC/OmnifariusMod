@@ -14,8 +14,9 @@ namespace OmnifariusMod.Tiles
             Main.tileMergeDirt[Type] = true;
             Main.tileBlockLight[Type] = true;
             Main.tileLighted[Type] = true;
-            //drop = mod.ItemType("");
-            AddMapEntry(new Color(150, 100, 100), "Iceeeee");//64, 51, 50
+            ModTranslation name = CreateMapEntryName();
+            name.SetDefault("Flaming Ice");
+            AddMapEntry(new Color(64, 51, 50), name);
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)
